@@ -22,8 +22,6 @@ lay1 = go.Layout(
     showlegend= True )
 
 
-app = dash.Dash()
-
 app.layout = html.Div(children=[
     html.H1(children="Thhhhhe Simpsonsss"),
 
