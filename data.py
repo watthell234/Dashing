@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 
 # data retrival
-plotly.plotly.sign_in(username='watthell234', api_key='3UbvwaALLqKzu55CnXdx')
+
 lds = dw.load_dataset('data-society/the-simpsons-by-the-data')
 simpsons_eps = lds.dataframes['simpsons_episodes'].sort_values(by='original_air_date', axis=0, ascending=True)
 simpsons_eps['original_air_date'] = pd.to_datetime(simpsons_eps['original_air_date'])
