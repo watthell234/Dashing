@@ -7,6 +7,9 @@ import datetime as dt
 import numpy as np
 import pandas as pd
 
+app = dash.Dash(__name__)
+server = app.server
+
 data = pd.read_csv('data.csv')
 x = data.original_air_year.tolist()
 y = data.total_us_viewers_in_millions.tolist()
