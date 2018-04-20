@@ -7,8 +7,9 @@ import datetime as dt
 import numpy as np
 import pandas as pd
 
+pd = pd
 app = dash.Dash(__name__)
-server = app.server
+server = app.run_server
 
 data = pd.read_csv('data.csv')
 x = data.original_air_year.tolist()
