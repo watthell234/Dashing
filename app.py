@@ -7,7 +7,7 @@ import datetime as dt
 import numpy as np
 import pandas as pd
 
-pd = pd
+
 app = dash.Dash(__name__)
 server = app.run_server
 
