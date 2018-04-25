@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import config
 
-plotly.plotly.sign_in(username=PLOTLY_USERNAME, password=PLOTLY_PASSWORD)
+plotly.plotly.sign_in(username='watthell234', api_key='MZVM8WScV46o6NAKGsjY')
 
 app = dash.Dash(__name__)
 server = app.run_server
