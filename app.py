@@ -5,7 +5,7 @@ import plotly
 import plotly.graph_objs as go
 import numpy as np
 import pandas as pd
-import config
+
 
 plotly.plotly.sign_in(username='watthell234', api_key='MZVM8WScV46o6NAKGsjY')
 
