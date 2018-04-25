@@ -5,7 +5,9 @@ import plotly
 import plotly.graph_objs as go
 import numpy as np
 import pandas as pd
+import config
 
+plotly.plotly.sign_in(username=PLOTLY_USERNAME, password=PLOTLY_PASSWORD)
 
 app = dash.Dash(__name__)
 server = app.run_server
