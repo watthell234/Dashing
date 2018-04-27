@@ -10,7 +10,7 @@ import pandas as pd
 plotly.plotly.sign_in(username='watthell234', api_key='MZVM8WScV46o6NAKGsjY')
 
 app = dash.Dash(__name__)
-server = app.run_server
+server = app.server
 
 data = pd.read_csv('data.csv')
 x = data.original_air_year.tolist()
