@@ -17,7 +17,7 @@ x = data.original_air_year.tolist()
 y = data.total_us_viewers_in_millions.tolist()
 
 # graph attributes
-trace1 = go.Bar(x = x, y = y, color= 'rgb(240,230,140)', name='US Viewers (in millions)')
+trace1 = go.Bar(x = x, y = y, marker=dict(color= 'rgb(240,230,140)'), name='US Viewers (in millions)')
 # dash layout attributes
 lay1 = go.Layout(
     title= 'Simpsons Viewers by release Year',
