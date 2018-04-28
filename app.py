@@ -21,7 +21,30 @@ trace1 = go.Bar(x = x, y = y, marker=dict(color= 'rgb(240,230,140)'), name='US V
 # dash layout attributes
 lay1 = go.Layout(
     title= 'Simpsons Viewers by release Year',
-    showlegend= True )
+    showlegend= True,
+    annotations = [dict(x=1990,
+                        y=np.max(y),
+                        xref='x',
+                        yref='y',
+                        text='Simpson viewership peaks at 577 Million viewers',
+                        showarrow=True,
+                        font=dict(
+                family='Courier New, monospace',
+                size=16,
+                color='#ffffff'
+            ),
+            align='center',
+            arrowhead=2,
+            arrowsize=1,
+            arrowwidth=2,
+            arrowcolor='#636363',
+            ax=20,
+            ay=-30,
+            bordercolor='#c7c7c7',
+            borderwidth=2,
+            borderpad=4,
+            bgcolor='#ff7f0e',
+            opacity=0.8)] )
 
 
 app.layout = html.Div(children=[
