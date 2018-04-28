@@ -26,7 +26,7 @@ lay1 = go.Layout(
                         y=np.max(y),
                         xref='x',
                         yref='y',
-                        text='Simpson viewership peaks at 577 Million viewers',
+                        text='Popularity peaks at 577M Viewers',
                         showarrow=True,
                         font=dict(
                 family='Courier New, monospace',
@@ -53,7 +53,7 @@ app.layout = html.Div(children=[
 
     dcc.Graph(
         id='simpson_viewership_trend',
-        config={'displayModeBar': False},
+        config={'displayModeBar': False, 'staticPlot': True},
         figure={
             'data': [trace1],
 
