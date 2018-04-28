@@ -51,7 +51,7 @@ lay1 = go.Layout(
 
 
 app.layout = html.Div(children=[
-    html.H1(children="Thhhhheee Simpsonss"),
+    html.H1(children="Simpsons Analysis"),
 
 
     dcc.Graph(
