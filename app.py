@@ -53,7 +53,7 @@ app.layout = html.Div(children=[
 
     dcc.Graph(
         id='simpson_viewership_trend',
-        config={'displayModeBar': False, 'staticPlot': True},
+        config={'displayModeBar': False},
         figure={
             'data': [trace1],
 
