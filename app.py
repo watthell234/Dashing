@@ -43,7 +43,7 @@ lay1 = go.Layout(
             bordercolor='#c7c7c7',
             borderwidth=2,
             borderpad=4,
-            bgcolor='#ff7f0e',
+            bgcolor='#636363',
             opacity=0.8)] )
 
 
