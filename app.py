@@ -23,9 +23,9 @@ simpsons_eps['original_air_year'] = simpsons_eps['original_air_date'].dt.year
 table = simpsons_eps.pivot_table(index='original_air_year', values='us_viewers_in_millions', aggfunc=np.sum).sum(axis=1).reset_index()
 table = pd.DataFrame(table)
 table.columns = ['original_air_year', 'total_us_viewers_in_millions']
-table.to_csv('data.csv')
-x = data.original_air_year.tolist()
-y = data.total_us_viewers_in_millions.tolist()
+#table.to_csv('data.csv')
+x = table.original_air_year.tolist()
+y = table.total_us_viewers_in_millions.tolist()
 
 # graph attributes
 trace1 = go.Bar(x = x, y = y, marker=dict(color= 'rgb(240,230,140)'), name='US Viewers (in millions)')
