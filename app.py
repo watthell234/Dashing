@@ -20,6 +20,7 @@ y = data.total_us_viewers_in_millions.tolist()
 trace1 = go.Bar(x = x, y = y, marker=dict(color= 'rgb(240,230,140)'), name='US Viewers (in millions)')
 # dash layout attributes
 lay1 = go.Layout(
+    autosize=True,
     title= 'Simpsons Viewers by release Year',
     showlegend= True,
     annotations = [dict(x=1990,
