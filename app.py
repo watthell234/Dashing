@@ -5,14 +5,25 @@ import plotly
 import plotly.graph_objs as go
 import numpy as np
 import pandas as pd
-
+from datadotworld.datadotworld import DataDotWorld
+from datadotworld.config import EnvConfig
 
 plotly.plotly.sign_in(username='watthell234', api_key='MZVM8WScV46o6NAKGsjY')
+
+dw = DataDotWorld(config=EnvConfig())
 
 app = dash.Dash(__name__)
 server = app.server
 
-data = pd.read_csv('data.csv')
+#data = pd.read_csv('data.csv')
+lds = dw.load_dataset('data-society/the-simpsons-by-the-data')
+simpsons_eps = lds.dataframes['simpsons_episodes'].sort_values(by='original_air_date', axis=0, ascending=True)
+simpsons_eps['original_air_date'] = pd.to_datetime(simpsons_eps['original_air_date'])
+simpsons_eps['original_air_year'] = simpsons_eps['original_air_date'].dt.year
+table = simpsons_eps.pivot_table(index='original_air_year', values='us_viewers_in_millions', aggfunc=np.sum).sum(axis=1).reset_index()
+table = pd.DataFrame(table)
+table.columns = ['original_air_year', 'total_us_viewers_in_millions']
+table.to_csv('data.csv')
 x = data.original_air_year.tolist()
 y = data.total_us_viewers_in_millions.tolist()
 
