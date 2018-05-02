@@ -25,7 +25,7 @@ lay1 = go.Layout(
     autosize=True,
     title= 'Simpsons Viewers by release Year',
     showlegend= True,
-    annotations = [dict(x=1990,
+    annotations = [dict(x=data.iloc[data['total_us_viewers_in_millions'].idxmax(), 1],
                         y=np.max(y),
                         xref='x',
                         yref='y',
