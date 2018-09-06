@@ -5,6 +5,7 @@ import plotly
 import plotly.graph_objs as go
 import numpy as np
 import pandas as pd
+from dashing.data import get_datadot
 
 
 plotly.plotly.sign_in(username='watthell234', api_key='MZVM8WScV46o6NAKGsjY')
@@ -13,7 +14,8 @@ plotly.plotly.sign_in(username='watthell234', api_key='MZVM8WScV46o6NAKGsjY')
 app = dash.Dash(__name__)
 server = app.server
 
-data = pd.read_csv('data.csv')
+data_csv = get_datadot()
+data = pd.read_csv(data_csv)
 #table.to_csv('data.csv')
 x = data.original_air_year.tolist()
 y = data.total_us_viewers_in_millions.tolist()
