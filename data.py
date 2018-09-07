@@ -1,4 +1,4 @@
-import datadotworld-py as dw
+import datadotworld as dw
 import plotly
 import plotly.graph_objs as go
 import datetime as dt
