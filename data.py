@@ -15,7 +15,6 @@ def get_datadot():
     table = pd.DataFrame(table)
     table.columns = ['original_air_year', 'total_us_viewers_in_millions']
 
-
     return table
 
 #x = table.original_air_year.tolist()
