@@ -5,7 +5,7 @@ import plotly
 import plotly.graph_objs as go
 import numpy as np
 import pandas as pd
-from dashing.data import get_datadot
+from data import get_datadot
 
 
 plotly.plotly.sign_in(username='watthell234', api_key='MZVM8WScV46o6NAKGsjY')
@@ -14,20 +14,20 @@ plotly.plotly.sign_in(username='watthell234', api_key='MZVM8WScV46o6NAKGsjY')
 app = dash.Dash(__name__)
 server = app.server
 
-data_csv = get_datadot()
-data = pd.read_csv(data_csv)
+data = get_datadot()
+
 #table.to_csv('data.csv')
-x = data.original_air_year.tolist()
-y = data.total_us_viewers_in_millions.tolist()
+x = data.original_air_year
+y = data.total_us_viewers_in_millions
 
 # graph attributes
-trace1 = go.Bar(x = x, y = y, marker=dict(color= 'rgb(240,230,140)'), name='US Viewers (in millions)')
+trace1 = go.Scatter(x = x, y = y,  fill = 'tonexty', line = dict(color = 'rgb(240,230,140)'), name='US Viewers (in millions)')
 # dash layout attributes
 lay1 = go.Layout(
     autosize=True,
     title= 'Simpsons Viewers by release Year',
     showlegend= True,
-    annotations = [dict(x=data.iloc[data['total_us_viewers_in_millions'].idxmax(), 1],
+    annotations = [dict(x=data.iloc[data['total_us_viewers_in_millions'].idxmax(), 0],
                         y=np.max(y),
                         xref='x',
                         yref='y',

@@ -14,8 +14,9 @@ def get_datadot():
     table = simpsons_eps.pivot_table(index='original_air_year', values='us_viewers_in_millions', aggfunc=np.sum).sum(axis=1).reset_index()
     table = pd.DataFrame(table)
     table.columns = ['original_air_year', 'total_us_viewers_in_millions']
-    data_csv = table.to_csv('data.csv')
 
-    return data_csv
+
+    return table
+
 #x = table.original_air_year.tolist()
 #y = table.total_us_viewers_in_millions.tolist()
