@@ -165,7 +165,7 @@ pyparsing==2.2.0
 pyshp==1.2.12
 PySocks==1.6.7
 pytest==3.2.1
-python==3.6
+python==3.6.5
 python-daemon==2.1.2
 python-dateutil==2.7.2
 pytz==2018.4
