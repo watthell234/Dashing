@@ -10,7 +10,7 @@ from data import get_datadot
 
 plotly.plotly.sign_in(username='watthell234', api_key='MZVM8WScV46o6NAKGsjY')
 
-## Thinking I need to create objects to build shit like an engineer
+
 app = dash.Dash(__name__)
 server = app.server
 
