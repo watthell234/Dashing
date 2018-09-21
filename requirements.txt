@@ -42,7 +42,6 @@ dash-renderer==0.12.1
 dask==0.15.3
 datadotworld==1.6.0
 datapackage==0.8.9
-datashape==0.5.4
 DateTime==4.2
 decorator==4.3.0
 distributed==1.19.1
