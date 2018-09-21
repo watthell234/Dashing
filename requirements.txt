@@ -60,7 +60,6 @@ floyd-cli==0.10.31
 future==0.16.0
 gevent==1.2.2
 glob2==0.5
-gmpy2==2.0.8
 graphene==2.0.1
 graphql-core==2.0
 graphql-relay==0.4.5
