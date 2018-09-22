@@ -4,6 +4,10 @@ import plotly.graph_objs as go
 import datetime as dt
 import numpy as np
 import pandas as pd
+import os
+
+config = dw.EnvConfig()
+
 
 # data retrival
 def get_datadot():
