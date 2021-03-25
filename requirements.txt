@@ -116,7 +116,7 @@ python-daemon==2.1.2
 python-dateutil==2.7.2
 pytz==2018.4
 PyWavelets==0.5.2
-PyYAML==3.12
+PyYAML==5.4
 pyzmq==16.0.2
 raven==6.4.0
 requests==2.18.4
