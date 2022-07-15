@@ -9,7 +9,7 @@ datadotworld==1.6.0
 datapackage==0.8.9
 DateTime==4.2
 decorator==4.3.0
-distributed==1.19.1
+distributed==2021.10.0
 docutils==0.14
 entrypoints==0.2.3
 enum34==1.1.6
